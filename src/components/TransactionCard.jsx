@@ -6,7 +6,7 @@ export default function TransactionCard({ transaction, onDelete, showActions = t
   const isIncome = transaction.type === 'income'
 
   return (
-    <article className="panel p-4">
+    <article className="panel animate-fade-up p-4">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="font-semibold text-ink">{transaction.title}</p>

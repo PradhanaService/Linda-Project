@@ -11,7 +11,7 @@ export default function Layout() {
       <Navbar onMenuClick={() => setSidebarOpen(true)} />
       <div className="flex">
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <main className="min-w-0 flex-1 p-4 md:p-6">
+        <main className="min-w-0 flex-1 animate-fade-up p-4 md:p-6">
           <Outlet />
         </main>
       </div>

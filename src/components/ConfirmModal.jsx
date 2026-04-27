@@ -7,7 +7,7 @@ export default function ConfirmModal({ open, title, message, onCancel, onConfirm
     <div className="fixed inset-0 z-50 grid place-items-center bg-slate-950/45 p-4">
       <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-soft">
         <div className="flex items-start gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-red-50 text-danger">
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-amber-50 text-danger">
             <AlertTriangle size={20} />
           </span>
           <div>

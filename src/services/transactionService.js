@@ -4,13 +4,11 @@ import {
   deleteDoc,
   doc,
   getDocs,
-  orderBy,
-  query,
   serverTimestamp,
   updateDoc,
-  where,
 } from 'firebase/firestore'
 import { db } from '../firebase/firebase'
+import { toDate } from '../utils/formatters.js'
 
 const transactionsRef = (userId) => collection(db, 'users', userId, 'transactions')
 const transactionRef = (userId, transactionId) =>
@@ -27,13 +25,14 @@ export async function createTransaction(userId, transaction) {
 }
 
 export async function fetchTransactions(userId) {
-  const q = query(transactionsRef(userId), where('userId', '==', userId), orderBy('date', 'desc'))
-  const snapshot = await getDocs(q)
+  const snapshot = await getDocs(transactionsRef(userId))
 
-  return snapshot.docs.map((item) => ({
-    id: item.id,
-    ...item.data(),
-  }))
+  return snapshot.docs
+    .map((item) => ({
+      id: item.id,
+      ...item.data(),
+    }))
+    .sort((a, b) => toDate(b.date) - toDate(a.date))
 }
 
 export async function updateTransaction(userId, transactionId, transaction) {

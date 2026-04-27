@@ -1,4 +1,4 @@
-import { getMonthKey, monthLabel } from './formatters'
+import { getMonthKey, monthLabel, toDate } from './formatters.js'
 
 export function calculateTotals(transactions) {
   return transactions.reduce(
@@ -44,7 +44,7 @@ export function buildBalanceTrend(transactions) {
   let balance = 0
 
   return [...transactions]
-    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .sort((a, b) => toDate(a.date) - toDate(b.date))
     .map((item) => {
       balance += item.type === 'income' ? Number(item.amount) : -Number(item.amount)
       return { date: item.date, balance }

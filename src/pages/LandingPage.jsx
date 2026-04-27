@@ -53,12 +53,12 @@ export default function LandingPage() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-lg bg-emerald-50 p-4">
-                <p className="text-sm text-emerald-700">Income</p>
-                <p className="mt-1 text-xl font-bold text-emerald-700">₹1,20,000</p>
+                <p className="text-sm text-emerald-800">Income</p>
+                <p className="mt-1 text-xl font-bold text-emerald-800">₹1,20,000</p>
               </div>
-              <div className="rounded-lg bg-red-50 p-4">
-                <p className="text-sm text-red-700">Expenses</p>
-                <p className="mt-1 text-xl font-bold text-red-700">₹35,500</p>
+              <div className="rounded-lg bg-amber-50 p-4">
+                <p className="text-sm text-amber-800">Expenses</p>
+                <p className="mt-1 text-xl font-bold text-amber-800">₹35,500</p>
               </div>
             </div>
             <div className="grid gap-3">
@@ -85,7 +85,7 @@ export default function LandingPage() {
 function Feature({ icon: Icon, title, text }) {
   return (
     <article className="panel p-5">
-      <span className="grid h-10 w-10 place-items-center rounded-md bg-blue-50 text-brand">
+      <span className="grid h-10 w-10 place-items-center rounded-md bg-emerald-50 text-brand">
         <Icon size={19} />
       </span>
       <h2 className="mt-4 text-lg font-semibold text-ink">{title}</h2>

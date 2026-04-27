@@ -43,6 +43,10 @@ Expense Tracker is a responsive web application that helps users register, login
 - Pie chart for expense categories
 - Bar chart for monthly income vs expenses
 - Line chart for balance trend
+- CSV export for transaction data
+- PDF report export for summaries and transaction history
+- Profile insights for transaction count, balance, top category, and payment usage
+- Light and dark mode toggle
 - Loading states, empty states, validation messages, and toast notifications
 - Mobile responsive layout
 - INR currency format

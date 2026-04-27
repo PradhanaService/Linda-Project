@@ -20,7 +20,7 @@ export default function TransactionTable({ transactions, onDelete, showActions =
           <TransactionCard key={transaction.id} transaction={transaction} onDelete={onDelete} showActions={showActions} />
         ))}
       </div>
-      <div className="panel hidden overflow-x-auto lg:block">
+      <div className="panel hidden animate-fade-up overflow-x-auto lg:block">
         <table className="min-w-full divide-y divide-line text-left text-sm">
           <thead className="bg-slate-50 text-xs uppercase tracking-wide text-muted">
             <tr>

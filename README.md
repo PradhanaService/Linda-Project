@@ -23,6 +23,10 @@ A full-stack Expense Tracker built with React, Vite, Tailwind CSS, Firebase Auth
 - INR currency formatting
 - Dashboard summary cards
 - Category pie chart, monthly bar chart, and balance trend line chart
+- CSV transaction export
+- PDF report export
+- Rich profile insights
+- Light and dark mode toggle
 - Responsive mobile and desktop UI
 - Loading, empty, error, and toast states
 

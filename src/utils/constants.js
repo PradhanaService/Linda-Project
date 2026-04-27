@@ -14,4 +14,4 @@ export const expenseCategories = [
 
 export const paymentMethods = ['Cash', 'UPI', 'Debit Card', 'Credit Card', 'Bank Transfer', 'Wallet']
 
-export const chartColors = ['#2563eb', '#059669', '#dc2626', '#f59e0b', '#7c3aed', '#0891b2', '#be123c', '#4b5563']
+export const chartColors = ['#047857', '#b77a13', '#0f766e', '#65a30d', '#15803d', '#ca8a04', '#166534', '#854d0e']

@@ -7,15 +7,22 @@ export const formatCurrency = (value) =>
     maximumFractionDigits: 0,
   }).format(Number(value || 0))
 
+export const toDate = (date) => {
+  if (!date) return null
+  if (typeof date?.toDate === 'function') return date.toDate()
+  if (typeof date === 'string') return parseISO(date)
+  return date
+}
+
 export const formatDate = (date) => {
   if (!date) return 'No date'
-  const value = typeof date === 'string' ? parseISO(date) : date
+  const value = toDate(date)
   return format(value, 'dd MMM yyyy')
 }
 
 export const getMonthKey = (date) => {
   if (!date) return ''
-  const value = typeof date === 'string' ? parseISO(date) : date
+  const value = toDate(date)
   return format(value, 'yyyy-MM')
 }
 
