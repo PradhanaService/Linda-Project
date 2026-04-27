@@ -45,6 +45,8 @@ npm run build
 3. Create a Firestore Database.
 4. Copy your web app Firebase config values into `.env`.
 5. Use `.env.example` as the required variable reference.
+6. When deploying on Vercel, add the same variables under **Project Settings > Environment Variables** and redeploy.
+7. Add the Vercel domain in Firebase Authentication under **Settings > Authorized domains**.
 
 ```env
 VITE_FIREBASE_API_KEY=
